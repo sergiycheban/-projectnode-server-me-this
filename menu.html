@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+    </nav>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Title</span>
+        </div>
+        <input id="Title" type="text" class="form-control" placeholder="Title" aria-describedby="basic-addon1">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Description</span>
+        </div>
+        <input id="Description" type="text" class="form-control" placeholder="Description"
+            aria-describedby="basic-addon1">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Category</span>
+        </div>
+        <select id="Category" class="custom-select" id="inputGroupSelect01">
+            <option value="Salads">Salads</option>
+            <option value="Main Dishes">Main Dishes</option>
+            <option value="Hello">Hello</option>
+        </select>
+        <div class="input-group-prepend">
+            <span class="input-group-text">Price</span>
+        </div>
+        <input id="Price" type="number" class="form-control" placeholder="Price" aria-describedby="basic-addon1">
+    </div>
+
+    <div id="menu" class="column">
+        <ul class="list-group" id="ulMenu"> </ul>
+    </div>
+
+    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="sendParams()">Add to menu</button>
+
+    <script src="menu.js"></script>
+    <script src="utils.js"></script>
+</body>
+
+</html>
