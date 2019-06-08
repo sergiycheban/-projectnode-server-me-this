@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Menu</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
@@ -13,6 +13,7 @@
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">Navbar</a>
     </nav>
+
     <div class="input-group mb-3">
         <div class="input-group-prepend">
             <span class="input-group-text">Title</span>
@@ -36,15 +37,13 @@
         </div>
         <input id="Price" type="number" class="form-control" placeholder="Price" aria-describedby="basic-addon1">
     </div>
-
+    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="sendParams()">Add to menu</button>
     <div id="menu" class="column">
         <ul class="list-group" id="ulMenu"> </ul>
     </div>
 
-    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="sendParams()">Add to menu</button>
-
-    <script src="menu.js"></script>
-    <script src="utils.js"></script>
+    <script src="../utils.js"></script>
+    <script src="../js/menu.js"></script>
 </body>
 
 </html>
