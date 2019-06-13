@@ -25,8 +25,6 @@ server.prototype.run = function (port, callback) {
 
         var basePath = collection.join('/');
 
-        console.log(basePath);
-
         var dotoffset = request.url.lastIndexOf('.');
         if (dotoffset != -1) {
             fs.readFile('../frontend' + request.url, function (err, data) {
@@ -34,7 +32,6 @@ server.prototype.run = function (port, callback) {
                     var mimetype = getMimeType(request)[request.url.substr(dotoffset)];
                     response.setHeader('Content-type', mimetype);
                     response.end(data);
-                    console.log(request.url, mimetype);
                 } else {
                     console.log('file not found: ' + request.url);
                     response.writeHead(404, "Not Found");

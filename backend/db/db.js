@@ -39,6 +39,8 @@ Database.prototype.select = function (document, whereCollection) {
                 values.forEach(value => {
                     if (value == Object.values(whereCollection)[0]) {
                         collections.push(element);
+                    } else {
+                        console.log("Dont Have!");
                     }
                 });
             }
@@ -53,11 +55,13 @@ Database.prototype.insert = function (document, object) {
     var processEntity = object;
     processEntity.id = id;
 
-    var storeEntity = JSON.stringify(processEntity) + '\n';
+    var storeEntity = JSON.stringify(processEntity) + '\r\n';
 
     console.log(storeEntity);
 
-    fs.writeFileSync(`${ENTITIES_PATH}/${document}`, "," + storeEntity);
+    fs.writeFileSync(`${ENTITIES_PATH}/${document}`, "," + storeEntity, {
+        flag: 'a'
+    });
 
     return processEntity;
 };
@@ -81,6 +85,8 @@ Database.prototype.delete = function (document, whereCollection) {
                 values.forEach(value => {
                     if (value == Object.values(whereCollection)[0]) {
                         obj.splice(count, 1);
+                    } else {
+                        console.log("Dont Have!");
                     }
                 });
             }
@@ -112,6 +118,8 @@ Database.prototype.update = function (document, whereCollection, updated) {
                         var keysUpdated = Object.keys(updated)[0];
                         var valuesUpdated = Object.values(updated)[0];
                         element[keysUpdated] = valuesUpdated;
+                    } else {
+                        console.log("Dont Have!");
                     }
                 });
             }
