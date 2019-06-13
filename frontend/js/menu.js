@@ -1,5 +1,3 @@
-console.log("HELLO")
-
 var menuJson = [{
     id: "d2qw13",
     title: "KUKURUDZA",
